@@ -1,0 +1,27 @@
+<div class="pagecontainer"><div class="row"><div class="col-md-12"><h1 class="center ">GTC SESSIONS</h1>
+<h3 class="center bold">- an Angular Prototype -</h3>
+<button class="btn btn-primary"
+              ng-csv="getArray" filename="session.csv" field-separator="," decimal-separator="."
+              >Export to CSV</button>
+
+<div class="row "><div class="col-md-10 col-md-offset-1 padder">
+    <ul class="sessionList" ng-repeat="session in vm.data">
+    <li class="sessionItem">
+        <div class="sessionContainer">
+            <div class="row"><div class="col-md-12">
+                <label class="bold">{{session.id}}</label>
+                <label class="title right">{{session.title}}</label></div></div>
+            <uib-tabset justified="true" class="tabContainer">
+    <uib-tab heading="Description"><label>Description</label><p class="descriptionContainer">{{session.description}}</p></uib-tab>
+    <uib-tab heading="Schedule"><p class="descriptionContainer">Schedule</p></uib-tab>
+    <uib-tab heading="Speakers"><p class="descriptionContainer">Speakers</p></uib-tab>
+  </uib-tabset>
+        </div>
+                         </li></ul>
+    
+  
+</div>
+</div>
+    </div>
+    </div>
+    </div>

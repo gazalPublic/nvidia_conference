@@ -1,0 +1,49 @@
+.sessionList{  
+    margin: 0;
+    padding: 0;
+}
+.sessionItem{
+    border-left: 1px solid #adadad;
+    border-top: 1px solid #adadad;
+    border-bottom: 1px solid #adadad;
+    list-style: none;
+}
+.center{
+    text-align: center;
+}
+.sessionContainer{
+    padding: 10px;
+}
+.padder{
+margin-top: 10px; 
+    margin-bottom: 10px;
+}
+.bold{
+    font-weight: 700;
+}
+.pagecontainer{
+    padding: 10px 60px;
+}
+.title{
+    font-style: italic;
+}
+.tabContainer{
+    padding-top: 10px;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.nav-tabs.nav-justified > .active > a{
+    background-color: cornflowerblue;
+}
+.nav-tabs.nav-justified{
+    box-sizing: none;
+}
+.descriptionContainer{
+    min-height:  70px;
+    overflow-y: auto;
+    height: 75px;
+}
