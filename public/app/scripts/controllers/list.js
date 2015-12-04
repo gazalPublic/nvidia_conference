@@ -1,5 +1,5 @@
 'use strict';
-
+/*global $:false */
 /**
  * @ngdoc function
  * @name publicApp.controller:ListCtrl
@@ -15,13 +15,20 @@ angular.module('publicApp')
       'Karma'
     ];
      var vm = this;
-    $http.get('https:localhost:8443/data').success(function(data){
-        //console.log(data);
-        vm.data = data;
-        vm.getCsv();
-    }).error(function(error){
-        console.log(error);
-    });
+    vm.fetchData = function(){
+        $('#activityIndicator').show();
+        $http.get('https:localhost:8443/data').success(function(data){
+            //console.log(data);
+            vm.data = data;
+            $('#activityIndicator').hide();
+            vm.getCsv();
+        }).error(function(error){
+            $('#activityIndicator').hide();
+            console.log(error);
+        });
+    };
+    
+    vm.fetchData();
     vm.getCsv = function(){
         console.log('get Csv');
         vm.dataforcsv={};
